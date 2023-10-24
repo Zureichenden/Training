@@ -19,6 +19,7 @@ export function Sidebar({ sidebarOpen, setSidebarOpen }) {
   const CambiarTheme = () => {
     setTheme((theme) => (theme === "light" ? "dark" : "light"));
   };
+  const colorTitle = theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
 
   return (
     <Container isOpen={sidebarOpen} themeUse={theme}>
@@ -56,7 +57,7 @@ export function Sidebar({ sidebarOpen, setSidebarOpen }) {
       ))}
       <Divider />
       <div className="Themecontent">
-        {sidebarOpen && <span className="titletheme">Dark mode</span>}
+        {sidebarOpen && <span className="titletheme">{colorTitle}</span>}
         <div className="Togglecontent">
           <div className="grid theme-container">
             <div className="content">
